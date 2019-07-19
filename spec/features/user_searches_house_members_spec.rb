@@ -8,12 +8,12 @@ RSpec.describe "it shows house members " do
     # When I visit "/"
     visit '/'
 
-
     # And I select "Greyjoy" from the dropdown
     find('#dropdown-list', :text => 'Greyjoy').click
 
     # And I click on "Get Members"
     click_on 'Get Members'
+    save_and_open_page
 
     # Then my path should be "/search" with "house=greyjoy" in the parameters
     expect(current_path).to have_content('/search')
