@@ -5,15 +5,12 @@ class HouseSearchResultFacade
   end
 
   def house_members
-    response = Faraday.get("http://westerosapi.herokuapp.com/api/v1/house/#{@house}?api_key=#{ENV['API_KEY']}")
+    service = HouseService.new
 
-    members = JSON.parse(response.body, symbolize_names: true)[:data][0][:attributes][:members]
+    members = service.get_results(@house)[:data][0][:attributes][:members]
 
     members.map do |member|
       HouseMember.new(member)
     end
   end
-
-
-
 end
