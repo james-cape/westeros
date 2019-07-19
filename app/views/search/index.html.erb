@@ -9,8 +9,8 @@
 
   <% facade.house_members.each do |member| %>
     <li id="member-<%= counter %>">
-      ID: <%= member[:id] %><br>
-      Name: <%= member[:name] %>
+      ID: <%= member.id %><br>
+      Name: <%= member.name %>
     </li>
     <br>
     <% counter += 1 %>
