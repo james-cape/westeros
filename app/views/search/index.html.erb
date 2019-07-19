@@ -1,0 +1,18 @@
+<h1>Search Results</h1>
+
+<h3>Number of members:</h3>
+<%= facade.house_members.count %> Members
+
+<h3>Names and IDs of members:</h3>
+<ol id='members'>
+  <% counter = 1 %>
+
+  <% facade.house_members.each do |member| %>
+    <li id="member-<%= counter %>">
+      ID: <%= member[:id] %><br>
+      Name: <%= member[:name] %>
+    </li>
+    <br>
+    <% counter += 1 %>
+  <% end %>
+</ol>
