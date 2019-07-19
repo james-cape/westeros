@@ -1,5 +1,4 @@
 <h1>Westeros Houses</h1>
 
-<%= select("house", "house_id", facade.house.collect {|house| [ house.name, house.id ] }, { :include_blank => true }) %>
 
-<%= link_to 'Get Members' %>
+<%= select_tag 'Get Members', options_for_select(@houses), :include_blank => true %>

@@ -6,10 +6,10 @@ RSpec.describe "it shows house members " do
   it "displays the house members" do
     # As a user
     # When I visit "/"
-    # visit '/'
-    #
+    visit '/'
+    # save_and_open_page
     # # And I select "Greyjoy" from the dropdown
-    # find('#dropdown-list', :text => 'Greyjoy').click
+    # find('#dropdown-list', :text => 'greyjoy').click
     #
     # # And I click on "Get Members"
     # click_on 'Get Members'
